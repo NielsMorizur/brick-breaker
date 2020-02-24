@@ -8,7 +8,7 @@ class Brick {
   Brick() {
     x = gridx;
     y = gridy;
-    c = #ffffff;
+    c = #FF1A05;
     hp = 1;
   }
 

@@ -1,17 +1,21 @@
 void game() {
-  background(0,0,235);
+  background(#000000);
   
    int i = 0;
   while (i < 60) {
-    Brick b = myBricks.get(i);
-    b.show();
-    b.act();
+    Brick b = myBricks.get(i); 
+      b.show();
+      b.act();
     i = i + 1;
   }
+    
+    noStroke();
+    fill(255);
   
-  ball();
   paddle();
-  
+    
+  ball();
+ 
 }
 
 void gameClicks() {
@@ -44,6 +48,6 @@ void paddle() {
   if (px <= - 10) px = -10;
   if (px >= width + 10) px = width + 10;
   
-  if (rightKey) px = px + 5;
-  if (leftKey) px = px - 5;
+  if (rightKey) px = px + 6;
+  if (leftKey) px = px - 6;
 }

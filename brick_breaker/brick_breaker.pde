@@ -5,7 +5,10 @@ final int INTRO = 1;
 final int GAME  = 2;
 final int GAMEOVER = 3;
 final int PAUSE = 4;
-int mode = GAME;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
+int mode;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
+
+//colors
+color red = #FF1A05;
 
 //ball variables
 float bx,by, bvx,bvy;
@@ -21,6 +24,7 @@ float gridx, gridy;
 
 void setup() {
   size(800, 600);
+  mode = INTRO;
   
   myBricks = new ArrayList<Brick>();
   
@@ -30,7 +34,8 @@ void setup() {
   while (i < 60) {
     myBricks.add( new Brick() );
     gridx = gridx + 60;
-    if (gridx >= 700) {
+     if (gridx == 400) gridx = 460;
+    if (gridx >= 760) {
      gridx = 100;
      gridy = gridy + 60;
     }
