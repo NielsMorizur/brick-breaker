@@ -7,6 +7,10 @@ void mouseReleased() {
     gameOverClicks();
   } else if (mode == PAUSE) {
     pauseClicks();
+  } else if (mode == OPTIONS) {
+    optionsClicks();
+  } else if (mode == WIN) {
+    winClicks();
   } else {
      println("Mode error");
   }
